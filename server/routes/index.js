@@ -8,5 +8,5 @@ exports.index = function(req, res){
 };
 
 exports.game = function (req, res) {
-	res.render('game');
+	res.render('game', { title : "Game"});
 };
