@@ -8,6 +8,7 @@ var routes = require('./routes');
 var user = require('./routes/user');
 var http = require('http');
 var path = require('path');
+var gameloop = require('./gameloop.js');
 
 var app = express(),
 		server = require('http').createServer (app),
@@ -41,3 +42,5 @@ server.listen(app.get('port'), function () {
 io.sockets.on('connection', function (socket) {
 	socket.emit('tmtc', {hello : "world"});
 });
+
+gameloop.init();
