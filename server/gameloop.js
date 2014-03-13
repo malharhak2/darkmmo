@@ -1,5 +1,6 @@
 var player = require('./player.js');
-var sockets = require('sockets').sockets;
+var sock = require('./sockets');
+var sockets = {};
 function inputs () {
 
 }
@@ -23,6 +24,7 @@ var loop = function () {
 };
 
 var init = function () {
+	sockets = sock.sockets();
 	loop();
 };
 

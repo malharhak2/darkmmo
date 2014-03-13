@@ -14,7 +14,7 @@ requirejs.config ({
 	}
 });
 
-requirejs (["jquery", "socket.io"], function ($, io) {
-	console.log("Tmtc");
-	console.log(io);
+requirejs (["gameloop"], function (loop) {
+	console.log("Allo");
+	loop.init();
 });

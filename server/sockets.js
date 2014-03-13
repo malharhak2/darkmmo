@@ -6,7 +6,6 @@ exports.init = function (server) {
 	sockets = io.sockets;
 };
 
-module.exports = {
-	sockets : sockets,
-	io : io
+exports.sockets = function ()   {
+	return sockets;
 };

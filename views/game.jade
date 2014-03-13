@@ -1,9 +1,8 @@
 extends layout
 
 block headers
-  script(src="/libs/requirejs/require.js" data-main="js/main.js")
+  script(type="text/javascript", src="/libs/requirejs/require.js", data-main="/js/main.js")
 block content
-  div#poney
-    h1 #{title}
-  div#game
-    canvas#gamecanvas
+  #gameContainer
+    canvas#game
+  #chatContainer
